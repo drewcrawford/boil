@@ -1,3 +1,16 @@
+This software is licensed under the Prosperity Public License which permits noncommercial use only.  This software may also be offered under other licenses.  Commercial licensing and support is available from [the author](mailto:drew@sealedabstract.com).
+
+As a special exception, if you've received under $100k in funding last year, **your use doesn't count as commercial use**, even if you make money.  As long as you qualify, you can use this software for any purpose without another license and free of charge.
+
+To decide if you qualify:
+
+
+- If you're using this software for a client, use your client’s funding.
+- Otherwise, if you’re an individual, sole proprietor, or disregarded entity, only gross revenue and funding related to this software counts.
+    - For example, if you use this software on a side project, but not for your main business, use the revenue and funding of your side project. You aren’t disqualified by the main business.
+- Otherwise, if you’re another kind of company, use the gross revenue and funding of the company.
+
+
 # The Prosperity Public License 3.0.0
 
 Contributor: Drew Crawford
