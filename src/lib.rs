@@ -31,6 +31,15 @@ mod imp {
 
     }
 }
+#[cfg(target_os = "linux")]
+mod imp {
+    pub struct Widget;
+    impl Widget {
+        fn activate() {/* macos implementation here */}
+        pub fn macos_only_fn() { }
+
+    }
+}
 
 use imp::Widget as Widget;
 ```
@@ -64,6 +73,16 @@ mod imp {
     }
     impl super::Widget for Widget {
         fn activate(&self) { /* mac-specific implementation */ }
+    }
+}
+#[cfg(target_os = "linux")]
+mod imp {
+    pub struct Widget;
+    impl Widget {
+        pub fn mac_only_fn(&self) { }
+    }
+    impl super::Widget for Widget {
+        fn activate(&self) { /* linux-specific implementation */ }
     }
 }
 
@@ -105,6 +124,14 @@ mod imp {
     impl Widget {
         pub fn mac_only_fn(&self) { }
         pub fn activate(&self) { /* mac-specific implementation */ }
+    }
+}
+#[cfg(target_os = "linux")]
+mod imp {
+    pub struct Widget;
+    impl Widget {
+        pub fn mac_only_fn(&self) { }
+        pub fn activate(&self) { /* linux-specific implementation */ }
     }
 }
 struct Widget(imp::Widget);
